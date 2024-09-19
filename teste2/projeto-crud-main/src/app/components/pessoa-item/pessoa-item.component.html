@@ -1,0 +1,25 @@
+<div class="borda corpo">
+  <div>
+    <div class="flex">
+      <div>
+        <h3>
+          Nome
+        </h3>
+        <p>{{pessoa.nome}}</p>
+      </div>
+      <div>
+        <h3>
+          Idade
+        </h3>
+        <p>{{pessoa.idade}}</p>
+      </div>
+    </div>
+    <h3>
+      email
+    </h3>
+    <p>{{pessoa.email}}</p>
+  </div>
+  <div class="delete" (click)="onDelete(pessoa)">
+    <fa-icon [icon]="faTimes" [ngStyle]="{'color': 'white'}"></fa-icon>
+  </div>
+</div>

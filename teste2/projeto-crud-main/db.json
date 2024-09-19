@@ -1,0 +1,16 @@
+{
+  "pessoas": [
+    {
+      "id": "bc44",
+      "nome": "Eduardo Gomes Machado",
+      "idade": 27,
+      "email": "eduardo.machado@icolabora.com"
+    },
+    {
+      "id": "588e",
+      "nome": "Eduardo Gomes Machado",
+      "idade": 21,
+      "email": "eduardo.machado@icolabora.com"
+    }
+  ]
+}

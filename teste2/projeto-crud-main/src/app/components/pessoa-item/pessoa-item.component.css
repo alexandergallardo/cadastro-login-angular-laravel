@@ -1,0 +1,22 @@
+.flex {
+  display: flex;
+  gap: 30px;
+}
+
+.borda {
+  background-color: aliceblue;
+  border: solid 1px gray;
+  padding: 0px 0px 0px 10px;
+}
+
+.corpo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delete {
+  background-color: red;
+  padding: 40px;
+  cursor: pointer;
+}
