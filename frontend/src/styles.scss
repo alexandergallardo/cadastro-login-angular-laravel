@@ -1,0 +1,81 @@
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #e3f2fd; /* azul claro suave */
+  margin: 0;
+  padding: 0;
+  color: #4a148c; /* azul escuro */
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.botoes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dashboard {
+  padding: 0 1.5rem 1.5rem 1.5rem !important;
+}
+
+.tabela {
+  margin-top: 1.5rem;
+  border: rgb(37, 37, 37) 1px solid !important;
+}
+.margem_left_05 {
+  margin-left: 0.5rem;
+}
+
+.main-container {
+  width: 100%;
+  max-width: 480px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.title {
+  padding: 0.5rem 2rem;
+  font-weight: bold !important;
+  font-family: Arial, sans-serif !important;
+  color: #6a1b9a;
+}
+
+mat-card {
+  background-color: #bbdefb;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(13, 71, 161, 0.3);
+  margin: 16px 0;
+}
+
+mat-card-title {
+  color: #6a1b9a;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+mat-card-content {
+  font-size: 1rem;
+  color: #7e57c2;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: #e3f2fd; /* azul claro suave */
+}
+
+.mat-button {
+  background-color: #7e57c2; /* azul padrão */
+  color: white;
+}
+
+.mat-button:hover {
+  background-color: #6a1b9a; /* azul médio */
+}
+
+.mat-error {
+  color: #d50000; /* vermelho para erros */
+}

@@ -1,0 +1,61 @@
+<mat-card>
+  <h3 class="title">Cadastro de Usuário</h3>
+  <mat-card-content>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Nome Completo</mat-label>
+        <input matInput formControlName="name" required />
+        <mat-error *ngIf="registerForm.get('name')?.hasError('required')">
+          Nome completo é obrigatório
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width" [color]="emailErrorMessage ? 'warn' : undefined">
+        <mat-label>E-mail</mat-label>
+        <input matInput formControlName="email" required email />
+        <mat-error *ngIf="registerForm.get('email')?.hasError('required')">
+          E-mail é obrigatório
+        </mat-error>
+        <mat-error *ngIf="registerForm.get('email')?.hasError('email')">
+          E-mail inválido
+        </mat-error>
+        <mat-error *ngIf="emailErrorMessage">
+          {{ emailErrorMessage }}
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Senha</mat-label>
+        <input matInput type="password" formControlName="password" required minlength="3" />
+        <mat-error *ngIf="registerForm.get('password')?.hasError('required')">
+          Senha é obrigatória
+        </mat-error>
+        <mat-error *ngIf="registerForm.get('password')?.hasError('minlength')">
+          Senha deve ter no mínimo 3 caracteres
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width" [color]="passwordMismatch && registerForm.get('password_confirmation')?.dirty ? 'warn' : undefined">
+        <mat-label>Confirme a Senha</mat-label>
+        <input matInput type="password" formControlName="password_confirmation" required minlength="3" />
+        <mat-error *ngIf="registerForm.get('password_confirmation')?.hasError('required')">
+          Confirmação de senha é obrigatória
+        </mat-error>
+        <mat-error *ngIf="registerForm.get('password_confirmation')?.hasError('minlength')">
+          Confirmação deve ter no mínimo 3 caracteres
+        </mat-error>
+      </mat-form-field>
+      <div *ngIf="passwordMismatch" class="error-message">
+        As senhas não coincidem.
+      </div>
+      <div class="botoes">
+        <button mat-raised-button color="primary" type="submit" [disabled]="registerForm.invalid">
+          Cadastrar
+        </button>
+        <button mat-raised-button color="warn" type="button" (click)="cancel()">
+          Cancelar
+        </button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>
