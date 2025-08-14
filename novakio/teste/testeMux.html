@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teste Mux</title>
+  <!-- Carrega a biblioteca Mux Embed para análise de vídeo -->
+  <script src="https://cdn.jsdelivr.net/npm/mux-embed@latest/dist/mux.js"></script>
+  <!-- Carrega configurações e lógica de monitoramento de visualizações -->
+  <script src="./mux_env.js"></script>
+  <style>
+    .video-container {
+      margin-bottom: 20px;
+    }
+
+    .views-counter {
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Teste Mux</h1>
+
+  <!-- Container do primeiro vídeo -->
+  <div class="video-container">
+    <!-- Player Mux integrado via iframe com ID único de playback -->
+    <iframe data-playback-id="qnhjKUOLeLAPrAtWf2zxrrfLfvqaSMgLyde9QPZ6r02k" src="https://player.mux.com/qnhjKUOLeLAPrAtWf2zxrrfLfvqaSMgLyde9QPZ6r02k?metadata-video-title=teste&video-title=teste&accent-color=%233490dc" style="width: 100%; border: none; aspect-ratio: 16/9;" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen>
+    </iframe>
+    <!-- Contador de visualizações que será atualizado dinamicamente -->
+    <div class="views-counter" id="views-qnhjKUOLeLAPrAtWf2zxrrfLfvqaSMgLyde9QPZ6r02k">Carregando...</div>
+  </div>
+
+  <!-- Container do segundo vídeo -->
+  <div class="video-container">
+    <!-- Segundo player Mux com ID diferente -->
+    <iframe data-playback-id="A00HRWICmbhfDS00v2mLWbvOrHryo5kBsbbPoXs01RXeA4" src="https://player.mux.com/A00HRWICmbhfDS00v2mLWbvOrHryo5kBsbbPoXs01RXeA4?metadata-video-title=teste2&video-title=teste2&accent-color=%233490dc" style="width: 100%; border: none; aspect-ratio: 16/9;" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen>
+    </iframe>
+    <!-- Contador de visualizações para o segundo vídeo -->
+    <div class="views-counter" id="views-A00HRWICmbhfDS00v2mLWbvOrHryo5kBsbbPoXs01RXeA4">Carregando...</div>
+  </div>
+</body>
+
+</html>
